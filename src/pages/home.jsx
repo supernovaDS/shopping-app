@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Circles } from "react-loader-spinner";
+import { PuffLoader } from "react-spinners";
 import ProductTile from "../components/product-tile";
 
 export default function Home() {
@@ -24,13 +24,8 @@ export default function Home() {
   return (
     <div>
       {loading ? (
-        <div className="min-h-screen w-full flex justify-center items-center ">
-          <Circles
-            height={"120"}
-            width={"120"}
-            color="rgb(127,29,29)"
-            visible={true}
-          />
+        <div className="flex items-center justify-center h-screen">
+          <PuffLoader color="#36d7b7" />
         </div>
       ) : (
         <div className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 max-w-6xl mx-auto p-3">
